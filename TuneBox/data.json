@@ -1,0 +1,37 @@
+{
+  "Artists": [
+    {
+      "Id": 1,
+      "Name": "The Neighbourhood",
+      "Country": "USA"
+    },
+    {
+      "Id": 2,
+      "Name": "Feist",
+      "Country": "Canada"
+    }
+  ],
+  "Songs": [
+    {
+      "Id": 421,
+      "Title": "Good Grief",
+      "Duration": 261,
+      "Genre": "Alternative/Indie Rock",
+      "ArtistId": 1
+    },
+    {
+      "Id": 302,
+      "Title": "OMG",
+      "Duration": 182,
+      "Genre": "Alternative/Indie Rock",
+      "ArtistId": 1
+    },
+    {
+      "Id": 348,
+      "Title": "My Moon My Man",
+      "Duration": 228,
+      "Genre": "Indie Pop",
+      "ArtistId": 2
+    }
+  ]
+}

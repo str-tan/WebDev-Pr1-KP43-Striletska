@@ -1,0 +1,6 @@
+@TuneBox_HostAddress = http://localhost:5168
+
+GET {{TuneBox_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
