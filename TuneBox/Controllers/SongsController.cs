@@ -40,6 +40,13 @@ namespace TuneBox.Controllers
         {
             var data = _dataService.LoadData();
 
+            if (!data.Artists.Any(a => a.Id == newSong.ArtistId))
+            {
+                return BadRequest(
+                    $"Artist with ID {newSong.ArtistId} does not exist."
+                );
+            }
+
             int newId = data.Songs.Any() ? data.Songs.Max(s => s.Id) + 1 : 1;
             newSong.Id = newId;
 
@@ -57,6 +64,13 @@ namespace TuneBox.Controllers
             var existingSong = data.Songs.FirstOrDefault(s => s.Id == id);
 
             if (existingSong == null) return NotFound($"Song with ID {id} not found.");
+
+            if (!data.Artists.Any(a => a.Id == updatedSong.ArtistId))
+            {
+                return BadRequest(
+                    $"Artist with ID {updatedSong.ArtistId} does not exist."
+                );
+            }
 
             existingSong.Title = updatedSong.Title;
             existingSong.Duration = updatedSong.Duration;
